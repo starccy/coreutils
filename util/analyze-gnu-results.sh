@@ -80,5 +80,3 @@ export XPASS
 ERROR=$(get_error)
 
 export ERROR
-
-
