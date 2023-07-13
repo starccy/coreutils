@@ -78,5 +78,4 @@ FAIL=$(get_fail)
 export FAIL
 XPASS=$(get_xpass)
 export XPASS
-ERROR=$(get_error)
-export ERROR
+export ERROR=$(get_error)
