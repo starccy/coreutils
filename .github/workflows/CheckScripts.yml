@@ -41,8 +41,8 @@ jobs:
 
   shell_fmt:
     name: ShellScript/Format
-    # for PR events, only run shfmt when they are merged
-    if: github.event.pull_request.merged == true || github.event_name == 'push'
+    # shfmt will be performed when the pr merged to main branch
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     needs: [ shell_check ]
     permissions:
