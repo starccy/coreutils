@@ -1,7 +1,6 @@
 #!/bin/sh
 # spell-checker:ignore xpass XPASS testsuite
 set -e
-# test
 
 # As we do two builds (with and without root), we need to do some trivial maths
 # to present the merge results
@@ -68,9 +67,16 @@ function get_error {
     echo $((NON_ROOT + AS_ROOT))
 }
 
-export TOTAL=$(get_total)
-export PASS=$(get_pass)
-export SKIP=$(get_skip)
-export FAIL=$(get_fail)
-export XPASS=$(get_xpass)
-export ERROR=$(get_error)
+
+TOTAL=$(get_total)
+export TOTAL
+PASS=$(get_pass)
+export PASS
+SKIP=$(get_skip)
+export SKIP
+FAIL=$(get_fail)
+export FAIL
+XPASS=$(get_xpass)
+export XPASS
+ERROR=$(get_error)
+export ERROR
