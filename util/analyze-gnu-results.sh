@@ -1,6 +1,7 @@
 #!/bin/sh
 # spell-checker:ignore xpass XPASS testsuite
 set -e
+# test
 
 # As we do two builds (with and without root), we need to do some trivial maths
 # to present the merge results
