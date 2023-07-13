@@ -10,12 +10,12 @@ on:
     branches:
       - main
     paths:
-      - 'utils/**.sh'
+      - 'util/**/*.sh'
   pull_request:
     branches:
       - main
     paths:
-      - 'utils/**.sh'
+      - 'util/**/*.sh'
 
 # End the current execution if there is a new changeset in the PR.
 concurrency:
@@ -51,9 +51,9 @@ jobs:
         run: |
           # show differs first for every files that need to be formatted
           # fmt options: bash syntax, 4 spaces indent, indent for switch-case
-          find util -name "*.sh" | xargs shfmt -ln=bash -i 4 -ci -d
+          find ${{ env.SCRIPT_DIR }} -name "*.sh" | xargs shfmt -ln=bash -i 4 -ci -d
           # do shell format
-          find util -name "*.sh" | xargs shfmt -ln=bash -i 4 -ci -w
+          find ${{ env.SCRIPT_DIR }} -name "*.sh" | xargs shfmt -ln=bash -i 4 -ci -w
       - name: Commit any changes
         uses: EndBug/add-and-commit@v9
         with:
