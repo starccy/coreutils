@@ -67,7 +67,6 @@ function get_error {
     echo $((NON_ROOT + AS_ROOT))
 }
 
-
 TOTAL=$(get_total)
 export TOTAL
 PASS=$(get_pass)
@@ -79,6 +78,6 @@ export FAIL
 XPASS=$(get_xpass)
 export XPASS
 ERROR=$(get_error)
-
-
 export ERROR
+
+
